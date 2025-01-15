@@ -1,74 +1,94 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from "react-native"
+import Index2 from "./index2";
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+const buoi3 = ()=>{
+  return(
+    // <Index2/>
+    <ScrollView >
+      <View style ={styles.container}>
+   <Text>
+    Em vào đời bằng {''}
+    <Text style= {{color: 'red', fontWeight: '600'}}>
+      vang đỏ
+    </Text>
+    <Text> anh vào đời bằng {''}</Text>
+    <Text style= {{color: 'yellow', fontWeight: '600'}}>nước trà</Text>
+   </Text>
 
-export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
+   <Text>
+    Bằng cơn mưa thơm {''}
+    <Text style= {{fontStyle: 'italic', fontSize: 20}}>mùi đất</Text>
+    <Text> và</Text>
+    <Text style={{fontSize: 10, fontStyle: 'italic'}}> bằng hoa dại mọc trước nhà</Text>
+   </Text>
+
+   <Text style={{color: 'gray', fontWeight: 'bold', fontStyle: 'italic'}}>
+    Em vào đời bằng kế hoạch anh vào đời bằng mộng mơ
+   </Text>
+
+   <Text>
+    Lý trí em là {'    '}
+    <Text style= {{textDecorationLine: 'underline'}}>
+      C    ô    n    g     c     ụ
+    </Text>
+   </Text>
+   <Text>
+    Còn trái tim anh là {' '}
+    <Text style= {{textDecorationLine: 'underline'}}>Đ     Ộ    N     G     C    Ơ</Text>
+   </Text>
+
+   <View style={styles.content1}>
+    <Text style={{fontSize: 25}}>
+      Em vào đời nhiều đồng nghiệp{'\n'}còn anh vào đời nhiều thân tình
+    </Text>
+
+   </View>
+
+   <View style={styles.content2}>
+    <Text style={{textAlign: 'center', fontSize: 20}}>
+      Anh chỉ muốn chân mình đạp đất không muốn đạp ai dưới chân mình
+    </Text>
+
+   </View>
+
+   <Text style={{fontWeight: 'bold', color: '#003399'}}>Em vào đời bằng
+
+    <Text style={{fontWeight: 'bold', color: 'white'}}> mây trắng</Text>
+    <Text style={{fontWeight: 'bold', color: '#003399'}}> em vào đời bằng</Text>
+    <Text style={{fontWeight: 'bold', color: '#FF9900'}}> nắng xanh</Text>
+   </Text>
+
+   <Text style={{fontWeight: 'bold', color: '#003399'}}>Em vào đời bằng
+
+    <Text style={{fontWeight: 'bold', color: '#FF9900'}}> đại lộ</Text>
+    <Text style={{fontWeight: 'bold', color: '#003399'}}> và con đường đó giờ</Text>
+    <Text style={{fontWeight: 'bold', color: 'white'}}> vắng anh</Text>
+   </Text>
+
+</View>
+    </ScrollView>
+
+
+  )
 }
 
+export default buoi3;
+
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
+  container:{
+    flex: 1,
+    backgroundColor: '#99FFFF',
+    padding: 10,
+  },
+  content1: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end'
+  },
+  content2:{
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+    padding: 20
+  }
+})
