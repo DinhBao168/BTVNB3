@@ -1,8 +1,10 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native"
 import Index2 from "./index2";
+import Index3 from './index3';
 
 const buoi3 = ()=>{
   return(
+    // <Index3/>
     // <Index2/>
     <ScrollView >
       <View style ={styles.container}>

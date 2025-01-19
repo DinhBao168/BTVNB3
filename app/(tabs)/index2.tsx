@@ -20,7 +20,7 @@ const Index2 = () => {
      alert('VUi lòng nhập mật khẩu')
       return;
     }else{
- alert('Đăng kí thành công')
+ alert(`Đăng kí thành công:\n ${name}\n ${email}`)
     }
 
     
